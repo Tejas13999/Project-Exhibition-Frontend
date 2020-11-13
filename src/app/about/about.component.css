@@ -1,0 +1,45 @@
+.bg_image {
+    background-color: #005584;
+    padding-top: 110px;
+    padding-bottom: 110px;
+    background-position: center center;
+    margin-top: 70px;
+}
+
+.container {
+    display: inline-block;
+    position: relative;
+    left: 20%;
+}
+
+.lg_text {
+    color: white;
+    position: relative;
+    width: 70%;
+}
+
+.tag_text {
+    color: white;
+    width: 70%;
+}
+
+.bg_image2 {
+    background-image: url("../../assets/bb.png");
+    background-size: 50rem;
+    padding-top: 110px;
+    padding-bottom: 110px;
+    background-position: center center;
+    margin-top: 70px;
+}
+
+.div_blc2 {
+    margin: 70px auto;
+    padding: 50px;
+    /* padding-left: 9rem; */
+}
+
+.desc_left {
+    position: relative;
+    left: 6rem;
+    width: 70%;
+}

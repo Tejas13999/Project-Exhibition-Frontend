@@ -1,0 +1,50 @@
+/* .tech_border {
+    display: block;
+    position: relative;
+    right: 2rem;
+}
+
+.comment_btn {
+    position: relative;
+    top: 10%;
+    left: 10%;
+}
+
+.comment_position {
+    margin-top: 5px;
+    margin-bottom: 10px;
+} */
+
+/* ----------------------------------------------- */
+
+hr {
+    border-style: dotted none none none;
+    color: grey;
+    border-width: 5px;
+    /* width: 5%; */
+    margin-top: 0rem;
+}
+
+.nav_dia {
+    padding-bottom: 0rem;
+    background-color: #f6f6f6;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav_page {
+    color: #5f5e68;
+}
+
+.nav_logo {
+    /* font-family: 'Pacifico', cursive; */
+    font-family: 'Aclonica', sans-serif;
+    font-size: 2rem;
+    padding: 0;
+    color: #7224a2;
+    /* font-family: 'Lalezar', cursive; */
+}
+
+div.form-group {
+    padding: 7px;
+    background-color: #f6f6f6;
+}

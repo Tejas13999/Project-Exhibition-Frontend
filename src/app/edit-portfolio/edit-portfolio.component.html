@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <!-- JavaScript -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!--for top loading icon-->
+    <link rel="icon" href="images/person-icon.png" />
+    <script src="https://kit.fontawesome.com/d78bc0f4e4.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="form">
+        <form action="">
+
+            <!-- Bio -->
+            <div class="bio magic">
+                <h2>Personal Info</h2>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <form action="" method="post" enctype="multipart/form-data" id="js-upload-form">
+
+                         <!--   <div class="photo">
+                                <label for="Photo" class="btn pic">Select Image
+                                    <input class="btn" type="file" id="photo">
+                                </label>
+                            </div>        -->
+
+                            <div class="card bg-light photo bio-image photo">
+                                <img src="data:image/png;base64,{{image}}" height="273px" width="273"
+                                    class="border border-dark" alt="image">
+                                <div class="card-img-overlay">
+                                    
+                                        <label class="btn pic text-warning">Select Image
+                                            <input class="btn" type="file" id="photo">
+                                        </label>
+                                    
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="col-lg-3">
+                        <input type="text" placeholder="Name" id="username">
+                        <textarea name="Details" id="bio" cols="32" rows="5"
+                            placeholder="Tell me about your self..."></textarea>
+                        <textarea name="tagLine" id="describe" cols="32" rows="2"
+                            placeholder="one line that can describe you.."></textarea>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="social">
+                            <i class="fab fa-linkedin fa-2x"></i>
+                            <input type="text" placeholder="Linked In" id="linkedLink">
+                        </div>
+                        <div class="social">
+                            <i class="fab fa-facebook fa-2x"></i>
+                            <input type="text" placeholder="FaceBook" id="facebookLink">
+                        </div>
+                        <div class="social">
+                            <i class="fab fa-instagram fa-2x"></i>
+                            <input type="text" placeholder="Instagram" id="instaLink">
+                        </div>
+                        <div class="social">
+                            <i class="fab fa-twitter fa-2x"></i>
+                            <input type="text" placeholder="Twitter" id="twitterLink">
+                        </div>
+                        <div class="social">
+                            <i class="fab fa-github fa-2x"></i>
+                            <input type="text" placeholder="Github" id="githubLink">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- skills -->
+            <div class="skills magic">
+                <h2>Skills</h2>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <input type="text" placeholder="Skill 1" id="skill1">
+                        <input type="text" placeholder="Skill 2" id="skill2">
+                        <input type="text" placeholder="Skill 3" id="skill3">
+                    </div>
+                    <div class="col-lg-3 social">
+                        <input type="text" placeholder="Skill 4" id="skill4">
+                        <input type="text" placeholder="Skill 5" id="skill5">
+                    </div>
+                </div>
+            </div>
+            <!-- hobbies -->
+            <div class="hobbies magic">
+                <h2>Hobbies</h2>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <input type="text" placeholder="Hobby 1" id="hobby1">
+                        <input type="text" placeholder="Hobby 2" id="hobby2">
+                    </div>
+                    <div class="col-lg-3 social">
+                        <input type="text" placeholder="Hobby 4" id="hobby3">
+                        <input type="text" placeholder="Hobby 5" id="hobby4">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="education magic">
+                <h2>Education</h2>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <h3>Institute 1</h3>
+                        <input type="text" placeholder="Year" id="edu1year">
+                        <input type="text" placeholder="Institute Name" id="edu1Inst">
+                        <input type="text" placeholder="Degree Courses" id="edu1Deg">
+                        <input type="text" placeholder="CGPA / Percentage" id="edu1Marks">
+
+                    </div>
+                    <div class="col-lg-3">
+                        <h3>Institute 2</h3>
+                        <input type="text" placeholder="Year" id="edu2year">
+                        <input type="text" placeholder="Institute Name" id="edu2Inst">
+                        <input type="text" placeholder="Degree Courses" id="edu2Deg">
+                        <input type="text" placeholder="CGPA / Percentage" id="edu2Marks">
+                    </div>
+                    <div class="col-lg-3">
+                        <h3>Institute 3</h3>
+                        <input type="text" placeholder="Year" id="edu3year">
+                        <input type="text" placeholder="Institute Name" id="edu3Inst">
+                        <input type="text" placeholder="Degree Courses" id="edu3Deg">
+                        <input type="text" placeholder="CGPA / Percentage" id="edu3Marks">
+                    </div>
+                    <div class="col-lg-3">
+                        <h3>Institute 4</h3>
+                        <input type="text" placeholder="Year" id="edu4year">
+                        <input type="text" placeholder="Institute Name" id="edu4Inst">
+                        <input type="text" placeholder="Degree Courses" id="edu4Deg">
+                        <input type="text" placeholder="CGPA / Percentage" id="edu4Marks">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Work Experience -->
+            <div class="experience magic">
+                <h2>Experience</h2>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <h3>Work Place 1</h3>
+                        <input type="text" placeholder="Year" id="exp1year">
+                        <input type="text" placeholder="Company Name" id="exp1Comp">
+                        <input type="text" placeholder="Post Name" id="exp1Post">
+                        <textarea name="Details" id="" cols="32" rows="4" id="exp1Detail"
+                            placeholder="Share Your Experience..."></textarea>
+                    </div>
+                    <div class="col-lg-3">
+                        <h3>Work Place 2</h3>
+                        <input type="text" placeholder="Year" id="exp2year">
+                        <input type="text" placeholder="Company Name" id="exp2Comp">
+                        <input type="text" placeholder="Post Name" id="exp2Post">
+                        <textarea name="Details" id="" cols="32" rows="4" id="exp2Detail"
+                            placeholder="Share Your Experience..."></textarea>
+                    </div>
+                    <div class="col-lg-3">
+                        <h3>Work Place 3</h3>
+                        <input type="text" placeholder="Year" id="exp3year">
+                        <input type="text" placeholder="Company Name" id="exp3Comp">
+                        <input type="text" placeholder="Post Name" id="exp3Post">
+                        <textarea name="Details" id="" cols="32" rows="4" id="exp3Detail"
+                            placeholder="Share Your Experience..."></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary" (click)="editPortfolio()">Upload</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

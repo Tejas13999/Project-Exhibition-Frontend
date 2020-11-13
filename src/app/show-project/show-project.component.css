@@ -1,0 +1,20 @@
+.tech_border {
+    display: block;
+    position: relative;
+    right: 2rem;
+}
+
+.c{
+    width: 450px;
+}
+
+.comment_btn {
+    position: relative;
+    top: 10%;
+    left: 10%;
+}
+
+.comment_position {
+    margin-top: 5px;
+    margin-bottom: 10px;
+} 

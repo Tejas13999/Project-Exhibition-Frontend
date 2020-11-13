@@ -1,0 +1,98 @@
+body {
+    background-color: #eaf6f6;
+    padding: 4.5% 10%;
+    margin: 0%;
+}
+
+.contain {
+    padding: 5%;
+    background-color: white;
+    box-shadow: 0px 0px 4px 0px #b0b3b7;
+
+}
+
+.inner_div {
+
+    width: 70%;
+    height: 70%;
+    margin: auto;
+}
+
+h1 {
+    /* font-family: "roboto", sans-serif; */
+    font-family: 'Aclonica', sans-serif;
+    color: #c026ff;
+    font-size: 4rem;
+    text-align: center;
+    transition-duration: 1s;
+
+}
+
+
+.input-group-prepend span {
+    width: 50px;
+    background: linear-gradient(0deg, rgba(153, 26, 211, 0.5889706224286589) 0%, rgba(153, 26, 211, 0.28644961402529767) 18%, rgba(80, 196, 239, 1) 98%);
+    border: 0 !important;
+}
+
+
+.login_btn,
+.partner_btn {
+
+    background: linear-gradient(0deg, rgba(153, 26, 211, 0.5889706224286589) 0%, rgba(153, 26, 211, 0.28644961402529767) 18%, rgba(80, 196, 239, 1) 98%);
+    width: 150px;
+    font-family: "roboto", sans-serif;
+    margin-bottom: 2.5%;
+}
+
+
+.login_btn:hover,
+.partner_btn:hover,
+.pic:hover {
+    background: linear-gradient(0deg, rgba(153, 26, 211, 0.5889706224286589) 0%, rgba(153, 26, 211, 0.6169818269104517) 18%, rgba(80, 196, 239, 1) 98%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.description {
+    margin-bottom: 2.5%;
+    border-left: solid 2px violet;
+    border-bottom: solid 2px violet;
+    border-radius: 5px;
+}
+
+.check {
+    display: inline-block;
+    /* padding: 20px; */
+    width: 40px;
+    height: 40px;
+
+}
+
+.check_div {
+    display: inline-block;
+    position: relative;
+    bottom: 10px;
+    margin-bottom: 10px;
+    color: #646464;
+}
+
+.check_lable {
+    display: inline;
+}
+
+.btn_overlay {
+    position: relative;
+    display: inline-block;
+    right: 10%;
+    width: 150px;
+    height: 40px;
+    opacity: 0;
+    bottom: 30px;
+}
+
+label.pic {
+    width: 150px;
+    height: 40px;
+    background: linear-gradient(0deg, rgba(153, 26, 211, 0.5889706224286589) 0%, rgba(153, 26, 211, 0.28644961402529767) 18%, rgba(80, 196, 239, 1) 98%);
+    font-family: "roboto", sans-serif;
+}

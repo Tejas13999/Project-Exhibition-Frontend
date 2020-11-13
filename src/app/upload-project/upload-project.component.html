@@ -1,0 +1,272 @@
+<!--<div class="container text-center">
+  <form action="" novalidate #userForm="ngForm" autocomplete="off" name="nyForm">
+    <div class="mt-4 mb-4">
+      <h1 class="h3 mb-4 mt-5 font-weight-heavy text-primary">Project Details </h1>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label mx-5 mr-5">Title : </label>
+      <div class="col-sm-5">
+        <input type="text" required="true" #title="ngModel" [class.is-invalid]="title.invalid && title.touched"
+          (blur)="title.invalid" class="form-control" id="title" name="title" placeholder="Project Title" ngModel>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="department" class="col-sm-2 col-form-label mx-5 mr-5">Department : </label>
+      <div class="col-sm-5">
+        <input type="text" required="true" #department="ngModel"
+          [class.is-invalid]="department.invalid && department.touched" (blur)="department.invalid" class="form-control"
+          id="department" name="department" placeholder="" ngModel>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="technology" class="col-sm-2 col-form-label mx-5 mr-5">Technology : </label>
+      <div class="col-sm-5">
+        <input type="text" required="true" #technology="ngModel"
+          [class.is-invalid]="technology.invalid && technology.touched" class="form-control" name="technology"
+          id="technology" ngModel>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="description" class="col-sm-2 col-form-label mx-5 mr-5">Description : </label>
+      <div class="col-sm-5">
+        <input type="text" required="true" #description="ngModel"
+          [class.is-invalid]="description.invalid && description.touched" class="form-control" name="description"
+          id="description" ngModel>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="software" class="col-sm-2 col-form-label mx-5">Software : </label>
+      <div class="col-sm-5">
+        <input type="checkbox" #software="ngModel" (change)="softwareRequire()" class="form-control" name="software"
+          id="software" ngModel>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="hardware" class="col-sm-2 col-form-label mx-5 mr-5">Hardware : </label>
+      <div class="col-sm-5">
+        <input type="checkbox" #hardware="ngModel" (change)="hardwareRequire()" class="form-control" name="hardware"
+          id="hardware" ngModel>
+      </div>
+    </div>
+
+    <div class="form-group row" *ngIf="softRequire">
+      <label for="language" class="col-sm-2 col-form-label mx-5 mr-5">Language : </label>
+      <div class="col-sm-5">
+        <input type="text" #language="ngModel" class="form-control" name="language" id="language" ngModel>
+      </div>
+    </div>
+
+    <div class="form-group row" *ngIf="hardRequire">
+      <label for="hkit" class="col-sm-2 col-form-label mx-5 mr-5">Hardware-Kit : </label>
+      <div class="col-sm-5">
+        <input type="text" #hkit="ngModel" class="form-control" name="hkit" id="hkit" ngModel>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="link" class="col-sm-2 col-form-label mx-5 mr-5">Link : </label>
+      <div class="col-sm-5">
+        <input type="url" #link="ngModel" class="form-control" name="link" id="link" ngModel>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="partner" class="col-sm-2 col-form-label mx-5 mr-5">1st Partner Name : </label>
+      <div class="col-sm-5">
+        <input type="text" #partner="ngModel" class="form-control" name="partner" id="partner" ngModel>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="partnereid" class="col-sm-2 col-form-label mx-5 mr-5">1st Partner EmailId : </label>
+      <div class="col-sm-5">
+        <input type="email" #partnereid="ngModel" class="form-control" name="partnereid" id="partnereid" ngModel>
+      </div>
+      <button class="ml-2" type="button" (click)="addSecondPartner()">Add Another Partner</button>
+    </div>
+
+    <div *ngIf="secondpartner">
+      <div class="form-group row">
+        <label for="spartner" class="col-sm-2 col-form-label mx-5 mr-5">2nd Partner Name : </label>
+        <div class="col-sm-5">
+          <input type="text" #spartner="ngModel" class="form-control" name="spartner" id="spartner" ngModel>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="spartnereid" class="col-sm-2 col-form-label mx-5 mr-5">2nd Partner EmailId : </label>
+        <div class="col-sm-5">
+          <input type="email" #spartnereid="ngModel" class="form-control" name="spartnereid" id="spartnereid" ngModel>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="form-group row">
+      <label for="image" class="col-sm-2 col-form-label mx-5 mr-5">Choose Image : </label>
+      <div class="col-sm-5">
+        <input type="file" #image="ngModel" (change)="fileChanged($event)" class="form-control" name="image" id="image"
+          ngModel>
+      </div>
+    </div>
+
+    <div>
+      <button [disabled]="userForm.form.invalid" class="btn btn-success" (click)="uploadProject()">Upload</button>
+    </div>
+
+  </form>
+
+</div>    -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>upload project</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!--for top loading icon-->
+    <link rel="icon" href="images/person-icon.png" />
+    <script src="https://kit.fontawesome.com/d78bc0f4e4.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aclonica&family=Lalezar&family=Pacifico&family=Roboto:wght@500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="contain">
+        <div class="inner_div">
+            <h1>Project Upload</h1>
+            <form>
+                <div class="input-group form-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-plus-circle"></i></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Title" id="title">
+                </div>
+
+                <div class="input-group form-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-building"></i></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Department" id="department">
+                </div>
+
+                <div class="input-group form-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-laptop-code"></i></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Category" id="technology">
+                </div>    
+
+                <div class="md-form description">
+                    <textarea id="" class="md-textarea form-control" placeholder="Description" id="description" rows="3"></textarea>
+                </div>
+
+                <div>
+                    <input type="checkbox" class="check" name="software" id="software" (change)="softwareRequire()">
+                    <span class="check_div"> Software</span>
+                </div>
+
+
+                <div class="input-group form-group" *ngIf="softRequire">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-globe-asia"></i></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="technology" id="language">
+                </div>
+
+                <div>
+                    <input type="checkbox" class="check" name="hardware" id="hardware" (change)="hardwareRequire()">
+                    <span class="check_div"> Hardware</span>
+                </div>
+
+
+                <div class="input-group form-group" *ngIf="hardRequire">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-microchip"></i></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Hardware-Kit" id="hkit">
+                </div>
+
+                <div class="input-group form-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-link"></i></span>
+                    </div>
+                    <input type="url" class="form-control" placeholder="Link" id="link">
+                </div>
+
+                <div class="input-group form-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="1st partner : Name " id="partner">
+                </div>
+
+                <div class="input-group form-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                    </div>
+                    <input type="email" class="form-control" placeholder="1st partner : Email " id="partnereid">
+                </div>
+
+                <div class="form-group">
+                    <input type="button" value="Add Partner" class="btn float-right partner_btn" (click)="addSecondPartner()">
+                </div>
+
+                <div class="input-group form-group" *ngIf="secondpartner">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="2nd partner : Name " id="spartner">
+                </div>
+
+                <div class="input-group form-group" *ngIf="secondpartner">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                    </div>
+                    <input type="email" class="form-control" placeholder="2nd partner : Email " id="spartnereid">
+                </div>
+
+                <div class="">
+                    <label for="Photo" class="btn pic">Choose Images
+                        <input class="btn btn_overlay" type="file" (change)="fileChanged($event)" name="image" id="image" multiple>
+                    </label>
+                </div>
+
+                <div class="">
+                  <label for="Photo" class="btn pic"> Documentation
+                      <input class="btn btn_overlay" type="file" (change)="docChanged($event)" name="image1" id="image1">
+                  </label>
+              </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Upload" class="btn float-right login_btn"  (click)="uploadProject()">
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

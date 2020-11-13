@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+
+
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    <div class=" container col-md-6 mt-3 ml-6" *ngFor="let row of title;let i=index">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card border-primary" style="width: 40rem;" (click)="next(projectId[i])">
+                    <img class="card-img-top" style="height: 20rem;" src="data:image/png;base64,{{image[i]}}"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title border-bottom pb-3">{{title[i]}} <a href="{{link[i]}}"
+                                class="float-right d-inline-flex share"> 
+                                <h6>{{link[i]}}</h6>
+                                <!--
+                                <div *ngIf="!{{link[i]}}; else elseBlock"><i class="fas fa-link text-primary"></i><ng-template #elseBlock></ng-template></div> -->
+                            </a>
+                            <p class="card-text">
+                                <small class="text-primary font-weight-bold">{{technology[i]}}</small>
+                                <small class="text-secondary font-weight-bold"> | </small>
+                                <small class="text-secondary font-weight-bold">{{department[i]}}</small>
+                            </p>
+
+                        </h4>
+
+                        <p class="card-text">{{description[i]}}</p>
+                        <!-- <a href="#" class="float-right">Read more <i class="fas fa-angle-double-right"></i></a> -->
+                    </div>
+                    <div class="card-footer bg-transparent py-1 text-right">
+                        <p class="card-text font-weight-bold">{{date[i] | date:'mediumDate'}}</p>
+                    </div>
+                    <div class="card-footer bg-transparent py-1 text-right input-group">
+
+                        <!--    <form>
+                            <input type="text" id="userComment" #userComment class="input-sm chat-input comment_position"
+                                placeholder="Write your message here...">
+                                <button class="btn btn-primary btn-sm comment_btn comment_position" (click)="addComment(projectId[i])">
+                                       Add Comment </button>   
+                            </form>   -->
+    
+                        <!--    <form class="form-inline my-2 my-lg-0">
+                                <input class="input-sm chat-input c comment_position" type="text" placeholder="Write your message here..." id="userComment">
+                                <button class="btn btn-primary btn-sm comment_btn comment_position" type="submit" (click)="addComment(projectId[i])">Add Comment</button>
+                            </form>      -->
+    
+                        <a class="tetx-info" (click)="next(projectId[i])">Add Comment...</a>
+        
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

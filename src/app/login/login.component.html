@@ -1,0 +1,132 @@
+<!--<div class="container text-center">
+  <form action="" novalidate #userForm="ngForm" autocomplete="off" name="nyForm">
+    <div class="mt-4 mb-4">      
+      <h1 class="h3 mb-4 mt-5 font-weight-heavy text-danger">LogIn   </h1>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputName" class="col-sm-2 col-form-label mx-5 mr-5">User Id : </label>
+      <div class="col-sm-5">
+        <input type="number" required="true" #username="ngModel" [class.is-invalid]="username.invalid && username.touched"
+          class="form-control" id="name" name="username" placeholder="User Id" ngModel>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputEmail" class="col-sm-2 col-form-label mx-5 mr-5">Email Id : </label>
+      <div class="col-sm-5">
+        <input type="email" required="true" #email="ngModel" [class.is-invalid]="email.invalid && email.touched"
+          (blur)="email.invalid" class="form-control" id="eid" name="email" placeholder="abc@email.com" ngModel>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputPassword" class="col-sm-2 col-form-label mx-5 mr-5">Password : </label>
+      <div class="col-sm-5">
+        <input type="password" required="true" #password="ngModel" [class.is-invalid]="password.invalid && password.touched"
+          class="form-control" name="password" id="pss" ngModel>
+      </div>
+    </div>
+
+    <div>
+      <button [disabled]="userForm.form.invalid" (click)="userLogIn()" class="btn btn-primary">Sign In</button>
+    </div>
+
+    <div class="text-center text-weight-heavy text-danger">{{error}}</div>
+
+  </form>
+
+  <h4 class="text-center mt-4">Register Your Account <a class="text-success" routerLink="/signup"> SignUp</a> </h4>
+
+</div>                    -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <!-- JavaScript -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!--for top loading icon-->
+    <link rel="icon" href="images/person-icon.png" />
+    <script src="https://kit.fontawesome.com/d78bc0f4e4.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aclonica&family=Lalezar&family=Pacifico&family=Roboto:wght@500&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="contain">
+        <div class="row">
+
+            <!-- LeftPart Logo -->
+            <div class="col-lg-4 leftpart">
+                <img src="../../assets/lock.png" class="logo" alt="">
+            </div>
+
+            <!-- RightPart Form -->
+            <div class="col-lg-8 rightpart">
+                <div class="inner_div">
+                    <h1>Sign in</h1>
+                    <form>
+                      <div class="input-group form-group">
+                          <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fas fa-user"></i></span>
+                          </div>
+                          <input type="text" class="form-control" placeholder="userId" id="name">
+
+                      </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                            </div>
+                            <input type="email" class="form-control" placeholder="email" id="eid">
+
+                        </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="password" class="form-control" placeholder="password" id="pss">
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Login" class="btn float-right login_btn" (click)="userLogIn()">
+                        </div>
+                        <div class="text-center text-weight-heavy text-danger">{{error}}</div>
+                    </form>
+
+                    <!-- Register Link -->
+                    <div class="links">
+                        Don't have an account? <a routerLink="/signup">Sign Up</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

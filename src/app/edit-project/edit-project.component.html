@@ -1,0 +1,126 @@
+<div class="container text-center">
+    <form action="" novalidate #userForm="ngForm" autocomplete="off" name="nyForm">
+      <div class="mt-4 mb-4">      
+        <h1 class="h3 mb-4 mt-5 font-weight-heavy text-primary">Project Details   </h1>
+      </div>
+  
+      <div class="form-group row">
+        <label for="title" class="col-sm-2 col-form-label mx-5 mr-5">Title : </label>
+        <div class="col-sm-5">
+          <input type="text" required="true" #title="ngModel" [class.is-invalid]=""
+            (blur)="department.invalid" class="form-control" id="title" name="title" placeholder="" ngModel>
+        </div>
+      </div>
+  
+      <div class="form-group row">
+        <label for="department" class="col-sm-2 col-form-label mx-5 mr-5">Department : </label>
+        <div class="col-sm-5">
+          <input type="text" required="true" #department="ngModel" [class.is-invalid]=""
+            (blur)="department.invalid" class="form-control" id="department" name="department" placeholder="" ngModel>
+        </div>
+      </div>
+  
+      <div class="form-group row">
+        <label for="technology" class="col-sm-2 col-form-label mx-5 mr-5">Technology : </label>
+        <div class="col-sm-5">
+          <input type="text" required="true" #technology="ngModel" [class.is-invalid]=""
+            class="form-control" name="technology" id="technology" ngModel>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="description" class="col-sm-2 col-form-label mx-5 mr-5">Description : </label>
+        <div class="col-sm-5">
+          <input type="text" required="true" #description="ngModel" [class.is-invalid]=""
+            class="form-control" name="description" id="description" ngModel>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="software" class="col-sm-2 col-form-label mx-5">Software : </label>
+        <div class="col-sm-5">
+          <input type="checkbox" #software="ngModel" (change)="softwareRequire()"
+            class="form-control" name="software" id="software" ngModel>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="hardware" class="col-sm-2 col-form-label mx-5 mr-5">Hardware : </label>
+        <div class="col-sm-5">
+          <input type="checkbox" #hardware="ngModel" (change)="hardwareRequire()"
+            class="form-control" name="hardware" id="hardware" ngModel>
+        </div>
+      </div>
+
+      <div class="form-group row" *ngIf="softRequire">
+        <label for="language" class="col-sm-2 col-form-label mx-5 mr-5">Language : </label>
+        <div class="col-sm-5">
+          <input type="text" #language="ngModel" 
+            class="form-control" name="language" id="language" ngModel>
+        </div>
+      </div>
+
+      <div class="form-group row" *ngIf="hardRequire">
+        <label for="hkit" class="col-sm-2 col-form-label mx-5 mr-5">Hardware-Kit : </label>
+        <div class="col-sm-5">
+          <input type="text" #hkit="ngModel" 
+            class="form-control" name="hkit" id="hkit" ngModel>
+        </div>
+      </div>
+
+
+      <div class="form-group row">
+        <label for="link" class="col-sm-2 col-form-label mx-5 mr-5">Link : </label>
+        <div class="col-sm-5">
+          <input type="url" #link="ngModel" 
+            class="form-control" name="link" id="link" ngModel>
+        </div>
+      </div>
+
+  <!--    <div class="form-group row">
+        <label for="img" class="col-sm-2 col-form-label mx-5 mr-5">Image : </label>
+        <div class="col-sm-5">
+          <input type="image" required="true" #img="ngModel" 
+            class="form-control" name="img" id="img" ngModel>
+        </div>
+      </div>   -->
+
+      <div class="form-group row">
+        <label for="partner" class="col-sm-2 col-form-label mx-5 mr-5">1st Partner Name : </label>
+        <div class="col-sm-5">
+          <input type="text" #partner="ngModel" 
+            class="form-control" name="partner" id="partner" ngModel>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="partnereid" class="col-sm-2 col-form-label mx-5 mr-5">1st Partner EmailId : </label>
+        <div class="col-sm-5">
+          <input type="email" #partner="ngModel" 
+            class="form-control" name="partnereid" id="partnereid" ngModel>
+        </div>
+        <button class="ml-2" type="button" (click)="addSecondPartner()">Add Another Partner</button>
+      </div>
+
+      
+      <div class="form-group row" *ngIf="secondpartner">
+        <label for="spartner" class="col-sm-2 col-form-label mx-5 mr-5">2nd Partner Name : </label>
+        <div class="col-sm-5">
+          <input type="text" #spartner="ngModel" 
+            class="form-control" name="spartner" id="spartner" ngModel>
+        </div>
+      </div>
+      <div class="form-group row" *ngIf="secondpartner">
+        <label for="spartnereid" class="col-sm-2 col-form-label mx-5 mr-5">2nd Partner EmailId : </label>
+        <div class="col-sm-5">
+          <input type="email" #spartnereid="ngModel" 
+            class="form-control" name="spartnereid" id="spartnereid" ngModel>
+        </div>
+      </div>
+  
+      <div>
+        <i class="mr-2 fas fa-2x fa-trash-alt" (click)="deleteProject()"></i>
+        <button  class="btn btn-success ml-2" (click)="editProject()">Upload</button>
+      </div>
+  
+    </form>
+  
+  </div>

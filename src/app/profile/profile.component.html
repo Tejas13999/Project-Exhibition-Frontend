@@ -1,0 +1,61 @@
+<div class="row mr-6">
+    <div class="col-md-12 text-center mr-2">
+
+        <div class="card bg-light photo bio-image photo" *ngIf="foundImage">
+            <img src="data:image/png;base64,{{profile_Pic}}" height="273px" width="273"
+                class="border border-dark" alt="image">
+            <div class="card-img-overlay">
+                    <label class="btn pic text-warning">Select Image
+                        <input class="btn" type="file" (change)="fileChanged($event)" id="photo">
+                    </label>
+            </div>
+        </div>
+        <div class="card bg-light photo bio-image photo" *ngIf="!foundImage">
+            <img src="../../assets/profile-2398782_1280.png" height="273px" width="273"
+                class="border border-dark" alt="image">
+            <div class="card-img-overlay">
+                    <label class="btn pic text-warning">Select Image
+                        <input class="btn" type="file" (change)="fileChanged($event)" name="image" id="image">
+                    </label>
+            </div>
+        </div>
+
+
+        <h2 class="text-primary">{{userName}}</h2> <button (click)="uploadProject()">Upload</button> <button
+            class="ml-2" (click)="uploadPortfolio()">Portfolio</button>
+    </div>
+</div>
+
+<div class=" container col-md-6 mt-3 ml-6" *ngFor="let row of title;let i=index">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card border-primary" style="width: 40rem;" (click)="edit(projectId[i])">
+                <img class="card-img-top" style="height: 20rem;" src="data:image/png;base64,{{image[i]}}"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title border-bottom pb-3">{{title[i]}} <a href="{{link[i]}}"
+                            class="float-right d-inline-flex share">
+                            <h6>{{link[i]}}</h6>
+                            </a>
+                        <p class="card-text">
+                            <small class="text-primary font-weight-bold">{{technology[i]}}</small>
+                            <small class="text-secondary font-weight-bold"> | </small>
+                            <small class="text-secondary font-weight-bold">{{department[i]}}</small>
+                        </p>
+
+                    </h4>
+
+                    <p class="card-text">{{description[i]}}</p>
+                </div>
+                <div class="card-footer bg-transparent py-1 text-right">
+                    <p class="card-text font-weight-bold">{{date[i] | date:'mediumDate'}}</p>
+                </div>
+                <div class="card-footer bg-transparent py-1 text-right input-group">
+
+                    <a class="tetx-info" (click)="next(projectId[i])">Add Comment...</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    

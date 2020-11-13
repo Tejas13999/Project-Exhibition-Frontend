@@ -1,0 +1,150 @@
+<!--<div class="container">
+    <form class="form-signin">
+      <div class="text-center mb-4">
+        
+        <h1 class="h3 mb-4 mt-5 font-weight-heavy text-primary">SignUp   </h1>
+      </div>
+    
+      <div class="form-label-group mt-2">
+        <input type="text" id="name" class="form-control" placeholder="Name" required="true" autofocus="">
+        <label for="name">Name</label>
+      </div>
+
+      <div class="form-label-group mt-2">
+        <input type="text" id="contact" class="form-control" placeholder="Contact" required="false" autofocus="">
+        <label for="contact">Contact</label>
+      </div>
+    
+      <div class="form-label-group mt-2">
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="true" autofocus="">
+        <label for="inputEmail">Email address</label>
+      </div>
+    
+      <div class="form-label-group mt-2">
+        <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" required="true">
+        <label for="inputPassword">Password</label>
+      </div>
+
+      <div class="form-label-group mt-2">
+        <input type="text" id="confirmPassword" class="form-control" placeholder="Rewrite Password" required="true" autofocus="">
+        <label for="confirmPassword">Confirm Password</label>
+      </div>
+
+      <div class="text-center text-danger text-Weight-heavy mt-4">{{err}}</div>
+    
+      <button class="btn btn-lg btn-success btn-block mt-2" type="submit" (click)="userSignUp()">Sign Up</button>
+    </form>
+    
+</div>   -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <!-- JavaScript -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!--for top loading icon-->
+    <link rel="icon" href="images/person-icon.png" />
+    <script src="https://kit.fontawesome.com/d78bc0f4e4.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aclonica&family=Lalezar&family=Pacifico&family=Roboto:wght@500&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="contain">
+        <img src="../../assets/new.png" class="mini_logo" alt="">
+        <div class="row">
+
+            <!-- LeftPart Logo -->
+            <div class="col-lg-4 leftpart">
+                <img src="../../assets/Reguser.png" class="logo" alt="">
+            </div>
+
+            <!-- RightPart Form -->
+            <div class="col-lg-8 rightpart">
+                <div class="inner_div">
+                    <h1>Register</h1>
+                    <form>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="name" id="name">
+                        </div>
+
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                            </div>
+                            <input type="email" class="form-control" placeholder="email" id="inputEmail">
+                        </div>
+
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-phone-alt"></i></span>
+                            </div>
+                            <input type="tel" class="form-control" placeholder="contact number" id="contact">
+                        </div>
+
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="password" class="form-control" placeholder="password" id="inputPassword">
+                        </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-check-double"></i></span>
+                            </div>
+                            <input type="password" class="form-control" placeholder="confirm-password" id="confirmPassword">
+                        </div>
+                        <div class="">
+                            <label for="Photo" class="btn pic">Choose Profile
+                                <input class="btn btn_overlay" type="file" (change)="fileChanged($event)" name="image" id="image">
+                            </label>
+                        </div>
+
+                        <div class="text-center text-danger text-Weight-heavy mt-4">{{err}}</div>
+
+                        <div class="form-group">
+                            <input type="submit" value="Sign Up" class="btn float-right login_btn" (click)="userSignUp()">
+                        </div>
+                    </form>
+
+                    <!-- Register Link -->
+                    <div class="links">
+                        Already have an account? <a routerLink="/login">Log In</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
